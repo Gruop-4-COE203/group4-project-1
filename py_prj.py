@@ -16,9 +16,17 @@ for line in exchange_rates:
 if "TRY" not in rates_dict:
     rates_dict["TRY"] = 1.0
 
-# Getting user inputs for exchange  
+# How many exchange rates loaded
+print(f"{len(exchange_rates)} types of exchange you can exchange:\n")
+for line in exchange_rates:
+    currency, rate = line.split("=")
+    print(f"{currency} : {rate}")
+
+
+# Getting user inputs for exchange with indexes 
 user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
+
 
 # Converting user inputs to uppercase to match dictionary keys
 convert_to = user_input_convert_to.upper()
@@ -44,10 +52,10 @@ def get_rate_from_file(currency):
 def calculate_exchange(from_currency, to_currency, amount):
     """Calculate conversions for all supported currencies."""
     rate_from = get_rate_from_file(from_currency)
-    rate_to = get_rate_from_file(to_currency)
+    rate_to = get_rate_from_file(to_currency)   
     if rate_from and rate_to:
         converted_amount = amount * (rate_from / rate_to)
-        return f"{amount} {from_currency} equals to: {converted_amount:.2f} {to_currency}"
+        return f"{amount} {from_currency} equals to: {converted_amount} {to_currency}"
     else:
         return "Currency not found in exchange_rate.txt file!"
 # Calculate using user input
