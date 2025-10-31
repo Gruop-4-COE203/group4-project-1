@@ -1,6 +1,6 @@
 #EXCHANGE RATE CALCULATOR
 
-print("Welcome to the exchange rate calculation system!")
+print("Welcome to the exchange rate calculation system!\n")
 
 # Loading exchange rates from file
 with open("exchange_rate.txt" , "r") as file:
@@ -17,14 +17,15 @@ if "TRY" not in rates_dict:
     rates_dict["TRY"] = 1.0
 
 # How many exchange rates loaded
-print(f"{len(exchange_rates)} types of exchange you can exchange:\n")
+print(f"{len(exchange_rates)} types of exchange you can exchange:")
 for line in exchange_rates:
     currency, rate = line.split("=")
     print(f"{currency} : {rate}")
+          
 
 
 # Getting user inputs for conversion
-user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
+user_input_convert_from = input("\nEnter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 
 
