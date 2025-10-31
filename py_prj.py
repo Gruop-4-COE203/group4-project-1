@@ -61,4 +61,3 @@ def calculate_exchange(from_currency, to_currency, amount):
 # Calculate using user input
 result = calculate_exchange(convert_from, convert_to, user_input_amount)
 print(result)
-
