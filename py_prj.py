@@ -84,3 +84,4 @@ print(result)
 for amount in amounts:
     result = calculate_exchange(convert_from, convert_to, amount)
     print(result)
+#ipek
