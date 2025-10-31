@@ -40,7 +40,7 @@ def get_rate_from_file(currency):
     else:
         return None
     
-# Function to calculate exchange between two currencies
+# Function to calculate exchange between two currencies,
 def calculate_exchange(from_currency, to_currency, amount):
     """Calculate conversions for all supported currencies."""
     rate_from = get_rate_from_file(from_currency)
