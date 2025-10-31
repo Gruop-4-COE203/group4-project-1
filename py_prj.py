@@ -40,15 +40,16 @@ def get_rate_from_file(currency):
     else:
         return None
     
-# Function to calculate exchange (only from specified currency to TRY)
+# Function to calculate exchange between two currencies
 def calculate_exchange(from_currency, to_currency, amount):
-    """Calculate the conversion using the fetched rate."""
-    rate = get_rate_from_file(from_currency)
-    if rate:
-        return f"{amount} {from_currency} equals to: {amount * rate:.2f} TRY"
+    """Calculate conversions for all supported currencies."""
+    rate_from = get_rate_from_file(from_currency)
+    rate_to = get_rate_from_file(to_currency)
+    if rate_from and rate_to:
+        converted_amount = amount * (rate_from / rate_to)
+        return f"{amount} {from_currency} equals to: {converted_amount:.2f} {to_currency}"
     else:
         return "Currency not found in exchange_rate.txt file!"
-
 # Calculate using user input
 result = calculate_exchange(convert_from, convert_to, user_input2)
 print(result)
