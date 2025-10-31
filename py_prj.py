@@ -23,7 +23,7 @@ for line in exchange_rates:
     print(f"{currency} : {rate}")
 
 
-# Getting user inputs for exchange with indexes 
+# Getting user inputs for conversion
 user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 
@@ -35,7 +35,7 @@ convert_from = user_input_convert_from.upper()
 
 # Validating user input currency and getting amount to convert
 if convert_from in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"] and convert_to in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"]:
-    user_input2 = float(input("Enter the amount of money you want to convert:"))
+    user_input_amount = float(input("Enter the amount of money you want to convert:"))
 else:
     print("Invalid currency.Please try again!")
     exit()
@@ -55,10 +55,10 @@ def calculate_exchange(from_currency, to_currency, amount):
     rate_to = get_rate_from_file(to_currency)   
     if rate_from and rate_to:
         converted_amount = amount * (rate_from / rate_to)
-        return f"{amount} {from_currency} equals to: {converted_amount} {to_currency}"
+        return f"{amount} {from_currency} equals to: {converted_amount:.2f} {to_currency}"
     else:
         return "Currency not found in exchange_rate.txt file!"
 # Calculate using user input
-result = calculate_exchange(convert_from, convert_to, user_input2)
+result = calculate_exchange(convert_from, convert_to, user_input_amount)
 print(result)
 
