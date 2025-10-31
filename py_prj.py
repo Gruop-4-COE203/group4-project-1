@@ -22,6 +22,20 @@ print(f"{len(exchange_rates)} types of exchange you can exchange:")
 for line in exchange_rates:
     currency, rate = line.split("=")
     print(f"{currency} : {rate}")
+
+while True:
+   user_input_convert from = input(\nEnter the currency unit you want to convert FROM(e.g. USD, TRY, EUR):").strip().upper()
+   user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").STRİP().UPPER()
+
+   if user_input_convert_from in rates_dict and user_input_covert_to in rates_dict :
+      convert_from = user_input_convert_from 
+      convert_to = user_input_convert_to
+      break
+   else:
+      print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
+
+
+#ece 1
           
 
 
@@ -36,7 +50,6 @@ for line in exchange_rates:
 
 # Getting user inputs for conversion
 user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
-
 user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 
 
@@ -85,3 +98,17 @@ for amount in amounts:
     result = calculate_exchange(convert_from, convert_to, amount)
     print(result)
 #ipek
+
+with open("coversion_log.txt", "a") as log_file:
+   log_file.write(f"\n---New Conversion---\n")
+   log_file.write(f"From: {convert_from} → To: {convert_to}\n")
+   log_file.write(f"Amounts entered: {','.join(map(str, amounts))}\n")
+   log_file.write("Results:\n")
+   for amount in amounts:
+      converted = calculate_exchange(convert_from, convert_to, amount)
+      log_file.write(f""{amount} {convert_from} = {converted:.2f} {convert_to}\n")
+   log_file.write("------------------------\n")
+
+print("\nYour conversion results were also saved in 'conversion_log.txt' )
+
+#ece 2 
