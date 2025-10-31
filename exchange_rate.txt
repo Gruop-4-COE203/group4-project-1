@@ -1,6 +1,8 @@
-USD=41.90
-EUR=48.66
-JPY=0.27
-SAR=11.17
-GBP=57.22
+Currency Code     Unit     Forex Buying     Forex Selling
+USD/TRY            1          41.90₺            41.97₺     
+EUR/TRY            1          48.66₺            48.74₺
+JPY/TRY            1          0.27₺             0.27₺
+SAR/TRY            1          11.17₺            11.19₺
+GBP/TRY            1          57.22₺            55.23₺
+
 TRY=1.00
