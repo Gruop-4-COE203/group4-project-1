@@ -12,13 +12,21 @@ for line in exchange_rates:
     currency, rate = line.split("=")
     rates_dict[currency] = float(rate)
 
-# Getting user input for currency   
-user_input = input("Enter the currency unit that you want to convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
-currency = user_input.upper()
+# check "TRY" in the rates file , if is not adding it manually
+if "TRY" not in rates_dict:
+    rates_dict["TRY"] = 1.0
+
+# Getting user inputs for exchange  
+user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
+user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
+
+# Converting user inputs to uppercase to match dictionary keys
+convert_to = user_input_convert_to.upper()
+convert_from = user_input_convert_from.upper()
+
 
 # Validating user input currency and getting amount to convert
-if currency in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"]:
-    print("Your currency is:", currency)
+if convert_from in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"] and convert_to in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"]:
     user_input2 = float(input("Enter the amount of money you want to convert:"))
 else:
     print("Invalid currency.Please try again!")
@@ -32,15 +40,15 @@ def get_rate_from_file(currency):
     else:
         return None
     
-# Function to calculate exchange
-def calculate_exchange(currency, money):
+# Function to calculate exchange (only from specified currency to TRY)
+def calculate_exchange(from_currency, to_currency, amount):
     """Calculate the conversion using the fetched rate."""
-    rate = get_rate_from_file(currency)
+    rate = get_rate_from_file(from_currency)
     if rate:
-        return f"{money} {currency} equals to: {money * rate:.2f} TRY"
+        return f"{amount} {from_currency} equals to: {amount * rate:.2f} TRY"
     else:
         return "Currency not found in exchange_rate.txt file!"
 
 # Calculate using user input
-result = calculate_exchange(currency, user_input2)
+result = calculate_exchange(convert_from, convert_to, user_input2)
 print(result)
