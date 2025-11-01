@@ -22,3 +22,12 @@ Amounts entered: 5.0
 Results:
 5.0 USD equals to: 4.31 EUR
 ------------------------
+
+---New Conversion---
+From: USD → To: IPEK
+Amounts entered: 400.0,2.0,1.0
+Results:
+Currency not found in exchange_rate.txt file!
+Currency not found in exchange_rate.txt file!
+Currency not found in exchange_rate.txt file!
+------------------------
