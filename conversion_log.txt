@@ -6,3 +6,19 @@ Results:
 120.0 CAD equals to: 131.58 AUD
 43.0 CAD equals to: 47.15 AUD
 ------------------------
+
+---New Conversion---
+From: EUR → To: TRY
+Amounts entered: 20.0,300.0,5.0
+Results:
+20.0 EUR equals to: 973.20 TRY
+300.0 EUR equals to: 14598.00 TRY
+5.0 EUR equals to: 243.30 TRY
+------------------------
+
+---New Conversion---
+From: USD → To: EUR
+Amounts entered: 5.0
+Results:
+5.0 USD equals to: 4.31 EUR
+------------------------
