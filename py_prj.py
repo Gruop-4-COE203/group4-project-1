@@ -25,9 +25,9 @@ for line in exchange_rates:
 
 while True:
    user_input_convert_from = input("Enter the currency unit you want to convert FROM(e.g. USD, TRY, EUR):").strip().upper()
-   user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").STRİP().UPPER()
+   user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").strip().upper()
 
-   if user_input_convert_from in rates_dict and user_input_covert_to in rates_dict :
+   if user_input_convert_from in rates_dict and user_input_convert_to in rates_dict :
       convert_from = user_input_convert_from 
       convert_to = user_input_convert_to
       break
@@ -106,7 +106,7 @@ with open("coversion_log.txt", "a") as log_file:
    log_file.write("Results:\n")
    for amount in amounts:
       converted = calculate_exchange(convert_from, convert_to, amount)
-      log_file.write(f""{amount} {convert_from} = {converted:.2f} {convert_to}")
+      log_file.write(converted + "\n")
    log_file.write("------------------------\n")
 
 print("Your conversion results were also saved in 'conversion_log.txt'" )

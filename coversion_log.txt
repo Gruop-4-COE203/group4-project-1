@@ -1,0 +1,12 @@
+
+---New Conversion---
+From: EUR → To: TRY
+Amounts entered: 60.0
+Results:
+
+---New Conversion---
+From: EUR → To: TRY
+Amounts entered: 50.0
+Results:
+50.0 EUR equals to: 2433.00 TRY
+------------------------
