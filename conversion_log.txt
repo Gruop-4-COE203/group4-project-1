@@ -1,0 +1,8 @@
+
+---New Conversion---
+From: CAD → To: AUD
+Amounts entered: 120.0,43.0
+Results:
+120.0 CAD equals to: 131.58 AUD
+43.0 CAD equals to: 47.15 AUD
+------------------------

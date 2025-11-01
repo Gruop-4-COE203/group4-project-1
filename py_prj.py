@@ -1,7 +1,5 @@
 #EXCHANGE RATE CALCULATOR
-
-print("Welcome to the exchange rate calculation system!\n")
-
+print("------------ Welcome to the exchange rate calculation system! ------------")
 # Loading exchange rates from file
 with open("exchange_rate.txt" , "r") as file:
    exchange_rates = [line.strip() for line in file.readlines()]
@@ -22,24 +20,24 @@ for line in exchange_rates:
     currency, rate = line.split("=")
     print(f"{currency} : {rate}")
 
-# Getting user input for conversion and validating currencies 
+# Getting user input for conversion and validating currency
 while True:
-   user_input_convert_from = input("Enter the currency unit you want to convert FROM(e.g. USD, TRY, EUR):").strip().upper()
+   user_input_convert_from = input("Enter the currency unit you want to convert FROM(Please choose in the list):").strip().upper()
    if user_input_convert_from in rates_dict:
        user_input_amounts = input("Enter one or more amounts separated by commas (e.g. 100, 250, 500): ").split(",")
        amounts = [float(x.strip()) for x in user_input_amounts]
        break
    else:
-       print("Invalid currency. Please enter currencies that are listed above.Try again.\n")        
+       print("Invalid currency. Please enter currencies that are listed above.Try again.\n")     
 
-user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").strip().upper()
+# Getting user input for conversion and validating currency
+user_input_convert_to = input("Enter the currency unit you want to convert TO(Please choose in the list):").strip().upper()
 if user_input_convert_to not in rates_dict:
     print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
         
 # Getting user input for amounts to convert
 convert_from = user_input_convert_from
 convert_to = user_input_convert_to
-
 
 # Function to get exchange rate from the loaded dictionary
 def get_rate_from_file(currency):
@@ -66,7 +64,7 @@ for amount in amounts:
     print(result)
 
 # Logging conversions to a file
-with open("coversion_log.txt", "a") as log_file:
+with open("conversion_log.txt", "a") as log_file:
    log_file.write(f"\n---New Conversion---\n")
    log_file.write(f"From: {convert_from} → To: {convert_to}\n")
    log_file.write(f"Amounts entered: {','.join(map(str, amounts))}\n")
