@@ -24,3 +24,19 @@ Amounts entered: 120.0
 Results:
 120.0 GBP equals to: 614.72 SAR
 ------------------------
+
+---New Conversion---
+From: EUR → To: TRY
+Amounts entered: 4.0
+Results:
+4.0 EUR equals to: 194.64 TRY
+------------------------
+
+---New Conversion---
+From: EUR → To: TRY
+Amounts entered: 2.0,3.0,500.0
+Results:
+2.0 EUR equals to: 97.32 TRY
+3.0 EUR equals to: 145.98 TRY
+500.0 EUR equals to: 24330.00 TRY
+------------------------
