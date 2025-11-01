@@ -17,44 +17,29 @@ if "TRY" not in rates_dict:
     rates_dict["TRY"] = 1.0
 
 # How many exchange rates loaded
-
 print(f"{len(exchange_rates)} types of exchange you can exchange:")
 for line in exchange_rates:
     currency, rate = line.split("=")
     print(f"{currency} : {rate}")
 
+# Getting user input for conversion and validating currencies 
 while True:
    user_input_convert_from = input("Enter the currency unit you want to convert FROM(e.g. USD, TRY, EUR):").strip().upper()
+   if user_input_convert_from not in rates_dict:
+        print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
+        continue 
+   
    user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").strip().upper()
+   if user_input_convert_to not in rates_dict:
+        print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
+        continue
+   break
 
-   if user_input_convert_from in rates_dict and user_input_convert_to in rates_dict :
-      convert_from = user_input_convert_from 
-      convert_to = user_input_convert_to
-      break
-   else:
-      print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
-
-
-# Getting user inputs for conversion
-user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
-user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
-
-
-# Converting user inputs to uppercase to match dictionary keys
-convert_to = user_input_convert_to.upper()
-convert_from = user_input_convert_from.upper()
-
-
-# Validating user input currency and getting amount to convert
-if convert_from in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"] and convert_to in ["USD", "TRY", "EUR", "JPY", "SAR", "GBP"]:
-
-    #user_input_amount = float(input("Enter the amount of money you want to convert:"))
-    user_input_amounts = input("Enter one or more amounts separated by commas (e.g. 100, 250, 500): ").split(",")
-    amounts = [float(x.strip()) for x in user_input_amounts]
-
-else:
-    print("Invalid currency.Please try again!")
-    exit()
+# Getting user input for amounts to convert
+convert_from = user_input_convert_from
+convert_to = user_input_convert_to
+user_input_amounts = input("Enter one or more amounts separated by commas (e.g. 100, 250, 500): ").split(",")
+amounts = [float(x.strip()) for x in user_input_amounts]
 
 # Function to get exchange rate from the loaded dictionary
 def get_rate_from_file(currency):
@@ -75,7 +60,7 @@ def calculate_exchange(from_currency, to_currency, amount):
     else:
         return "Currency not found in exchange_rate.txt file!"
 
-# Displaying results for each amount
+# Performing conversions and displaying results
 for amount in amounts:
     result = calculate_exchange(convert_from, convert_to, amount)
     print(result)

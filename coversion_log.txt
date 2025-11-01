@@ -17,3 +17,10 @@ Amounts entered: 60.0
 Results:
 60.0 EUR equals to: 2919.60 TRY
 ------------------------
+
+---New Conversion---
+From: GBP → To: SAR
+Amounts entered: 120.0
+Results:
+120.0 GBP equals to: 614.72 SAR
+------------------------
