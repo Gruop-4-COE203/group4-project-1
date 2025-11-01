@@ -35,19 +35,6 @@ while True:
       print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
 
 
-#ece 1
-          
-
-
-# Getting user inputs for conversion
-#user_input_convert_from = input("\nEnter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
-
-#print(f"{len(exchange_rates)} types of exchange you can exchange:\n")
-#for line in exchange_rates:
- #   currency, rate = line.split("=")
-  #  print(f"{currency} : {rate}")
-
-
 # Getting user inputs for conversion
 user_input_convert_from = input("Enter the currency unit that you want from convert(e.g. USD, TRY, EUR, JPY, SAR, GBP):")
 user_input_convert_to = input("Enter the currency unit that you want to convert from (e.g. USD, TRY, EUR, JPY, SAR, GBP):")
@@ -87,18 +74,13 @@ def calculate_exchange(from_currency, to_currency, amount):
         return f"{amount} {from_currency} equals to: {converted_amount:.2f} {to_currency}"
     else:
         return "Currency not found in exchange_rate.txt file!"
-# Calculate using user input
 
-#result = calculate_exchange(convert_from, convert_to, user_input_amount)
-#print(result)
-
-#zehra
-
+# Displaying results for each amount
 for amount in amounts:
     result = calculate_exchange(convert_from, convert_to, amount)
     print(result)
-#ipek
 
+# Logging conversions to a file
 with open("coversion_log.txt", "a") as log_file:
    log_file.write(f"\n---New Conversion---\n")
    log_file.write(f"From: {convert_from} → To: {convert_to}\n")
@@ -110,7 +92,3 @@ with open("coversion_log.txt", "a") as log_file:
    log_file.write("------------------------\n")
 
 print("Your conversion results were also saved in 'conversion_log.txt'" )
-
-
-#ece 2 
-
