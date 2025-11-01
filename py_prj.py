@@ -25,21 +25,21 @@ for line in exchange_rates:
 # Getting user input for conversion and validating currencies 
 while True:
    user_input_convert_from = input("Enter the currency unit you want to convert FROM(e.g. USD, TRY, EUR):").strip().upper()
-   if user_input_convert_from not in rates_dict:
-        print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
-        continue 
-   
-   user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").strip().upper()
-   if user_input_convert_to not in rates_dict:
-        print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
-        continue
-   break
+   if user_input_convert_from in rates_dict:
+       user_input_amounts = input("Enter one or more amounts separated by commas (e.g. 100, 250, 500): ").split(",")
+       amounts = [float(x.strip()) for x in user_input_amounts]
+       break
+   else:
+       print("Invalid currency. Please enter currencies that are listed above.Try again.\n")        
 
+user_input_convert_to = input("Enter the currency unit you want to convert TO(e.g. USD, TRY, EUR):").strip().upper()
+if user_input_convert_to not in rates_dict:
+    print("Invalid currency. Please enter currencies that are listed above.Try again.\n")
+        
 # Getting user input for amounts to convert
 convert_from = user_input_convert_from
 convert_to = user_input_convert_to
-user_input_amounts = input("Enter one or more amounts separated by commas (e.g. 100, 250, 500): ").split(",")
-amounts = [float(x.strip()) for x in user_input_amounts]
+
 
 # Function to get exchange rate from the loaded dictionary
 def get_rate_from_file(currency):
@@ -75,5 +75,4 @@ with open("coversion_log.txt", "a") as log_file:
       converted = calculate_exchange(convert_from, convert_to, amount)
       log_file.write(converted + "\n")
    log_file.write("------------------------\n")
-
 print("Your conversion results were also saved in 'conversion_log.txt'" )
