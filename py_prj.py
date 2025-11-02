@@ -1,5 +1,4 @@
 #EXCHANGE RATE CALCULATOR
-import requests
 import datetime
 
 def main():
@@ -10,13 +9,13 @@ def main():
 
    rates_dict = {}
    for line in exchange_rates:
-       currency, rate = line.split("=")
-       rates_dict[currency] = float(rate)
+       currency, name_of_money, rate = line.split("; ")
+       rates_dict[currency, name_of_money] = float(rate)
 
    print(f"{len(exchange_rates)} types of exchange you can exchange:")
    for line in exchange_rates:
-       currency, rate = line.split("=")
-       print(f"{currency} : {rate}")
+       currency, name_of_money, rate = line.split("; ")
+       print(f"{currency} , {name_of_money} : {rate}")
 
    while True:
       user_input_convert_from = input("Enter the currency unit you want to convert FROM(Please choose in the list):").strip().upper()
@@ -67,7 +66,7 @@ def main():
    print("Your conversion results were also saved in 'conversion_log.txt'" )
 
 if __name__=="__main__":
-    main()
+
 
 #para biriminin açıklamasını dosyaya ekle (USD; United States Dollar; 41,90)!
 #varsayıma göre; bir txt dosyası ayrı bir uygulama ile her x milisnde bir gidip bir güncel excahgne tablodan verileri çekiyor, verinin güvenilirliği otomasyona bağlı olduğu için txt dosayadki olası hatalar ve kur farklılığı göz ardı ediliyor 
@@ -79,3 +78,4 @@ if __name__=="__main__":
 #log dosyasına tarih eklene bilir (yapıldı)
 #log dosyasının başına mesaj yazılabilir fatura sisteme kaydelidli şeklinde
 #log dosyanın içini düzenle (63.satır) mantıklı hale getir ve  f" ile yaz (yapıldı)
+    main()
