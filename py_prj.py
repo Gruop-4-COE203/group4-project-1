@@ -56,7 +56,7 @@ def main():
    
    with open("conversion_log.txt", "a") as log_file:
       log_file.write(f"\n---New Conversion---\n")
-      log_file.write(f"Date & Time Information: {datetime.datetime.now().strftime('%Y-%M-%D %H:%M')}\n")
+      log_file.write(f"Date & Time Information: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
       log_file.write(f"From: {convert_from} → To: {convert_to}\n")
       log_file.write(f"Amounts entered: {','.join(map(str, amounts))}\n")
       log_file.write("Results:\n")
