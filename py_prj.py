@@ -8,14 +8,14 @@ def main():
    with open("exchange_rate.txt" , "r") as file:
       exchange_rates = [line.strip() for line in file.readlines()]
 
-   rates_dict = {}
+   rates_dict = {}   
    for line in exchange_rates:
-       currency, name_of_money, rate = line.split("; ")
+       currency, name_of_money, rate = line.split(";")
        rates_dict[currency] = float(rate)
 
    print(f"{len(exchange_rates)} types of exchange you can exchange:")
    for line in exchange_rates:
-       currency, name_of_money, rate = line.split("; ")
+       currency, name_of_money, rate = line.split(";")
        print(f"{currency} , {name_of_money} : {rate}")
 
    print("\nNote: All exchange rates are based on TRY = 1.0\n")
@@ -48,13 +48,14 @@ def main():
        rate_from = get_rate_from_file(from_currency)
        rate_to = get_rate_from_file(to_currency)   
        if rate_from and rate_to:
-           return  amount * (rate_from / rate_to)
+           return amount * (rate_from / rate_to)
        else:
            return "Currency not found in exchange_rate.txt file!"
    
    for amount in amounts:
-       result = f"{amount} {convert_from} equals to: {result:.2f} {convert_to}"
-       print(result)
+       converted= calculate_exchange(convert_from, convert_to, amount)
+       print(f"{amount} {convert_from} equals to: {converted:.2f} {convert_to}")
+      
    
    with open("conversion_log.txt", "a") as log_file:
       log_file.write(f"\n---New Conversion---\n")
@@ -64,7 +65,7 @@ def main():
       log_file.write("Results:\n")
       for amount in amounts:
          converted = calculate_exchange(convert_from, convert_to, amount)
-         log_file.write(f"{result:.2f} {convert_to} \n")
+         log_file.write(f"{converted:.2f} {convert_to} \n")
       log_file.write("------------------------\n")
    print("Your conversion results were also saved in 'conversion_log.txt'" )
 

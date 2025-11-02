@@ -1,21 +1,21 @@
-TRY; Turkhis Lira; 1.00
-USD; United States Dollar; 41.90
-EUR; European Union; 48.66
-GBP; Great British Pound; 57.22
-JPY; Japanese Yen; 0.27
-SAR; Saudia Arabian Riyal; 11.17
-CNY; Chinese Yuan Renminbi; 5.80
-CHF; Swiss Franc; 45.62
-CAD; Canadian Dollar; 30.35
-AUD; Australian Dollar; 27.68
-NOK; Norwegian Krone; 3.61
-SEK; Swedish Krona; 3.99
-DKK; Danish Krone; 6.52
-PLN; Polish Zloty; 11.31
-RUB; Russian Ruble; 0.47
-INR; Indian Rupee; 0.50 
-KRW; South Korean Won; 0.030
-BRL; Brazilian Real; 7.18
-MXN; Mexican Peso; 2.39
-NZD; New Zealand Dollar; 25.41
-AED; Emirati Dirham; 11.40
+TRY;Turkhis Lira;1.00
+USD;United States Dollar;41.90
+EUR;European Union;48.66
+GBP;Great British Pound;57.22
+JPY;Japanese Yen;0.27
+SAR;Saudia Arabian Riyal;11.17
+CNY;Chinese Yuan Renminbi;5.80
+CHF;Swiss Franc;45.62
+CAD;Canadian Dollar;30.35
+AUD;Australian Dollar;27.68
+NOK;Norwegian Krone;3.61
+SEK;Swedish Krona;3.99
+DKK;Danish Krone;6.52
+PLN;Polish Zloty;11.31
+RUB;Russian Ruble;0.47
+INR;Indian Rupee;0.50 
+KRW;South Korean Won;0.03
+BRL;Brazilian Real;7.18
+MXN;Mexican Peso;2.39
+NZD;New Zealand Dollar;25.41
+AED;Emirati Dirham;11.40
