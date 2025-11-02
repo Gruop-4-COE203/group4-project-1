@@ -1,9 +1,14 @@
 #EXCHANGE RATE CALCULATOR
 import datetime
+import os
 
 def main():
    print("------------ Welcome to the exchange rate calculation system! ------------")
    print("This system converts currencies based on the latest exchange_rate.txt file.")
+
+   if not os.path.exists("exchange_rate.txt"):
+      print("Error: 'exchange_rate.txt' file not found! Please ensure it is in the same folder as this program.")
+      return
 
    with open("exchange_rate.txt" , "r") as file:
       exchange_rates = [line.strip() for line in file.readlines()]
