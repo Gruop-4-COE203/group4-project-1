@@ -77,3 +77,11 @@ Amounts entered: 100.0
 Results:
 4190.00 TRY 
 ------------------------
+
+---New Conversion---
+Date & Time Information: 2025-11-02 18:36
+From: USD → To: AUD
+Amounts entered: 250.0
+Results:
+378.43 AUD 
+------------------------
