@@ -56,3 +56,16 @@ Results:
 20.0 AED equals to: 5.44 USD
 1.0 AED equals to: 0.27 USD
 ------------------------
+
+---New Conversion---
+From: PLN → To: TRY
+
+---New Conversion---
+Date & Time Information: 2025-39-11/02/25 14:39
+From: EUR → To: AUD
+Amounts entered: 3.0,2.0,44.0
+Results:
+3.0 EUR equals to: 5.27 AUD
+2.0 EUR equals to: 3.52 AUD
+44.0 EUR equals to: 77.35 AUD
+------------------------
