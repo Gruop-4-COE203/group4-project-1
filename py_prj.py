@@ -10,7 +10,7 @@ def main():
    rates_dict = {}
    for line in exchange_rates:
        currency, name_of_money, rate = line.split("; ")
-       rates_dict[currency, name_of_money] = float(rate)
+       rates_dict[currency] = float(rate)
 
    print(f"{len(exchange_rates)} types of exchange you can exchange:")
    for line in exchange_rates:
@@ -68,7 +68,7 @@ def main():
 if __name__=="__main__":
 
 
-#para biriminin açıklamasını dosyaya ekle (USD; United States Dollar; 41,90)!
+#para biriminin açıklamasını dosyaya ekle (USD; United States Dollar; 41,90)!(yapıldı)
 #varsayıma göre; bir txt dosyası ayrı bir uygulama ile her x milisnde bir gidip bir güncel excahgne tablodan verileri çekiyor, verinin güvenilirliği otomasyona bağlı olduğu için txt dosayadki olası hatalar ve kur farklılığı göz ardı ediliyor 
 #kod içindeki açıklamları sisteme yüklemden sil (yapıldı)
 #function mantığı dışında kullanılmıştır (42 ve 51. satır) düzetl(yapıldı)
