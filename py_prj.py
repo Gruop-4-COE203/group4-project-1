@@ -3,6 +3,7 @@ import datetime
 
 def main():
    print("------------ Welcome to the exchange rate calculation system! ------------")
+   print("This system converts currencies based on the latest exchange_rate.txt file.")
 
    with open("exchange_rate.txt" , "r") as file:
       exchange_rates = [line.strip() for line in file.readlines()]
