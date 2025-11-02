@@ -17,6 +17,8 @@ def main():
        currency, name_of_money, rate = line.split("; ")
        print(f"{currency} , {name_of_money} : {rate}")
 
+   print("\nNote: All exchange rates are based on TRY = 1.0\n")
+
    while True:
       user_input_convert_from = input("Enter the currency unit you want to convert FROM(Please choose in the list):").strip().upper()
       if user_input_convert_from in rates_dict:
@@ -66,6 +68,7 @@ def main():
    print("Your conversion results were also saved in 'conversion_log.txt'" )
 
 if __name__=="__main__":
+    main()
 
 
 #para biriminin açıklamasını dosyaya ekle (USD; United States Dollar; 41,90)!(yapıldı)
@@ -78,4 +81,4 @@ if __name__=="__main__":
 #log dosyasına tarih eklene bilir (yapıldı)
 #log dosyasının başına mesaj yazılabilir fatura sisteme kaydelidli şeklinde
 #log dosyanın içini düzenle (63.satır) mantıklı hale getir ve  f" ile yaz (yapıldı)
-    main()
+   
