@@ -85,3 +85,12 @@ Amounts entered: 250.0
 Results:
 378.43 AUD 
 ------------------------
+
+---New Conversion---
+Date & Time Information: 2025-11-03 01:01
+From: EUR → To: TRY
+Amounts entered: 50.0,30.0
+Results:
+2433.00 TRY 
+1459.80 TRY 
+------------------------
