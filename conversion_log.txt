@@ -31,3 +31,12 @@ Currency not found in exchange_rate.txt file!
 Currency not found in exchange_rate.txt file!
 Currency not found in exchange_rate.txt file!
 ------------------------
+
+---New Conversion---
+From: EUR → To: TRY
+Amounts entered: 4.0,30.0,200.0
+Results:
+4.0 EUR equals to: 194.64 TRY
+30.0 EUR equals to: 1459.80 TRY
+200.0 EUR equals to: 9732.00 TRY
+------------------------
