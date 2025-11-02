@@ -40,3 +40,19 @@ Results:
 30.0 EUR equals to: 1459.80 TRY
 200.0 EUR equals to: 9732.00 TRY
 ------------------------
+
+---New Conversion---
+From: AUD → To: TRY
+Amounts entered: 500.0
+Results:
+500.0 AUD equals to: 13840.00 TRY
+------------------------
+
+---New Conversion---
+From: AED → To: USD
+Amounts entered: 30.0,20.0,1.0
+Results:
+30.0 AED equals to: 8.16 USD
+20.0 AED equals to: 5.44 USD
+1.0 AED equals to: 0.27 USD
+------------------------
