@@ -76,6 +76,6 @@ if __name__=="__main__":
 #check if TRY  varsayıma ters düşüyor kompel sil DRY uymuyor (yapıldı)
 #os ile dosya kontrolü ekle excahnge rate dosyası
 #sisteme mesaj ekle rate'in try = 1.0'a bağlı olduğu ile ilgili
-#log dosyasına tarih eklene bilir 
+#log dosyasına tarih eklene bilir (yapıldı)
 #log dosyasının başına mesaj yazılabilir fatura sisteme kaydelidli şeklinde
 #log dosyanın içini düzenle (63.satır) mantıklı hale getir ve  f" ile yaz (yapıldı)
