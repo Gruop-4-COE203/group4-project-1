@@ -103,3 +103,13 @@ Results:
 122.19 EUR 
 292.43 EUR 
 ------------------------
+
+---New Conversion---
+Date & Time Information: 2025-11-04 00:29
+From: EUR → To: INR
+Amounts entered: 3.0,2.0,300.0
+Results:
+291.96 INR 
+194.64 INR 
+29196.00 INR 
+------------------------
