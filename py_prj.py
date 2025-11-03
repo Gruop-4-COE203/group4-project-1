@@ -72,7 +72,7 @@ def main():
          converted = calculate_exchange(convert_from, convert_to, amount)
          log_file.write(f"{converted:.2f} {convert_to} \n")
       log_file.write("------------------------\n")
-   print("Your conversion results were also saved in 'conversion_log.txt'" )
+   print("Your conversion results were saved in 'conversion_log.txt'" )
 
 if __name__=="__main__":
     main()
