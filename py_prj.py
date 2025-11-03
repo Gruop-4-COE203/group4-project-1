@@ -3,13 +3,11 @@ import datetime
 import os
 
 def main():
-   print("------------ Welcome to the exchange rate calculation system! ------------")
-   print("This system converts currencies based on the latest exchange_rate.txt file.")
-
+   print("-------- Welcome to the exchange rate calculation system! --------")
    if not os.path.exists("exchange_rate.txt"):
-      print("Error: 'exchange_rate.txt' file not found! Please ensure it is in the same folder as this program.")
+      print("Error:'exchange_rate.txt' file not found! (Be sure it is in the same folder as this program)")
       return
-
+   
    with open("exchange_rate.txt" , "r") as file:
       exchange_rates = [line.strip() for line in file.readlines()]
 
@@ -22,7 +20,6 @@ def main():
    for line in exchange_rates:
        currency, name_of_money, rate = line.split(";")
        print(f"{currency} , {name_of_money} : {rate}")
-
    print("\nNote: All exchange rates are based on TRY = 1.0\n")
 
    while True:
@@ -42,7 +39,6 @@ def main():
    convert_to = user_input_convert_to
 
    def get_rate_from_file(currency):
-       """Fetch exchange rate dynamically from the loaded dictionary."""
        if currency in rates_dict:
            return rates_dict[currency]
        else:
@@ -61,7 +57,6 @@ def main():
        converted= calculate_exchange(convert_from, convert_to, amount)
        print(f"{amount} {convert_from} equals to: {converted:.2f} {convert_to}")
       
-   
    with open("conversion_log.txt", "a") as log_file:
       log_file.write(f"\n---New Conversion---\n")
       log_file.write(f"Date & Time Information: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
@@ -76,5 +71,4 @@ def main():
 
 if __name__=="__main__":
     main()
-
-#varsayıma göre; bir txt dosyası ayrı bir uygulama ile her x milisnde bir gidip bir güncel excahgne tablodan verileri çekiyor, verinin güvenilirliği otomasyona bağlı olduğu için txt dosayadki olası hatalar ve kur farklılığı göz ardı ediliyor 
+    

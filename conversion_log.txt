@@ -94,3 +94,12 @@ Results:
 2433.00 TRY 
 1459.80 TRY 
 ------------------------
+
+---New Conversion---
+Date & Time Information: 2025-11-03 21:23
+From: NZD → To: EUR
+Amounts entered: 234.0,560.0
+Results:
+122.19 EUR 
+292.43 EUR 
+------------------------
